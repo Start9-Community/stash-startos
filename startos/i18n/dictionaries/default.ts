@@ -10,6 +10,12 @@ const dict = {
   // interfaces.ts
   'Web UI': 4,
   'The web interface of Stash': 5,
+
+  // actions/setUiPassword.ts + init/taskSetPassword.ts
+  'Set UI Password': 6,
+  'Generate a new password for logging in to the Stash web interface. The username is always "admin".': 7,
+  'This replaces any existing password. Update saved logins after running it.': 8,
+  'Generate a password to log in to the Stash web interface': 9,
 } as const
 
 /**

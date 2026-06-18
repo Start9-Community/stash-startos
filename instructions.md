@@ -1,11 +1,13 @@
 # Stash
 
-Stash is your private "save anything" inbox with a brain. Paste a link, screenshot, code snippet, quote, or reminder and Stash automatically figures out what it is, titles it, summarizes it, tags it, and makes it searchable — then you can **ask questions** and get answers drawn from your own saved items, each source cited. Everything runs on your server via QVAC; nothing you save ever leaves the box.
+## Documentation
+
+- [Stash on GitHub](https://github.com/savewithstash/stash) — the upstream README and source for the app this package runs.
 
 ## Getting started
 
 1. Open Stash's **Dashboard** tab.
-2. Click the **Web UI** interface to open the app.
+2. Click the **Web UI** interface and log in as **admin** (see **Logging in** below to get your password).
 3. Paste anything into the bar and hit Enter — it's saved instantly.
 
 ## First run
@@ -16,6 +18,16 @@ On first launch Stash downloads about **1.3 GB of AI model weights** in the back
 - AI classification and **Ask mode** switch on automatically once the models report **Ready**.
 
 The vision model that describes images is downloaded separately the first time you save or ask about an image (it needs ~2 GB of RAM while active).
+
+## Logging in
+
+Stash has no built-in login, so StartOS protects the web interface with a username and password at the edge — the UI stays locked until you set one. On first launch you'll see a **critical task, Set UI Password**, in Stash's notifications.
+
+1. Run **Set UI Password** (from the task prompt or Stash's **Actions**).
+2. StartOS generates a strong password and shows it with the username, **admin** — copy both.
+3. Enter them when your browser prompts you to open the **Web UI**.
+
+Run **Set UI Password** again any time to rotate the password. It's stored on the backed-up `main` volume, so it survives restarts, updates, and restores.
 
 ## Choosing models
 

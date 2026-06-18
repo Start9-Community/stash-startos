@@ -8,6 +8,10 @@ export default {
     3: 'La interfaz web no está lista',
     4: 'Interfaz web',
     5: 'La interfaz web de Stash',
+    6: 'Establecer contraseña de la interfaz',
+    7: 'Genera una nueva contraseña para iniciar sesión en la interfaz web de Stash. El nombre de usuario siempre es «admin».',
+    8: 'Esto reemplaza cualquier contraseña existente. Actualice los inicios de sesión guardados después de ejecutarla.',
+    9: 'Genere una contraseña para iniciar sesión en la interfaz web de Stash',
   },
   de_DE: {
     0: 'Starte Stash!',
@@ -16,6 +20,10 @@ export default {
     3: 'Die Weboberfläche ist nicht bereit',
     4: 'Weboberfläche',
     5: 'Die Weboberfläche von Stash',
+    6: 'UI-Passwort festlegen',
+    7: 'Generiert ein neues Passwort für die Anmeldung in der Stash-Weboberfläche. Der Benutzername ist immer „admin“.',
+    8: 'Dies ersetzt ein vorhandenes Passwort. Aktualisieren Sie gespeicherte Logins nach dem Ausführen.',
+    9: 'Generieren Sie ein Passwort für die Anmeldung in der Stash-Weboberfläche',
   },
   pl_PL: {
     0: 'Uruchamianie Stash!',
@@ -24,6 +32,10 @@ export default {
     3: 'Interfejs webowy nie jest gotowy',
     4: 'Interfejs webowy',
     5: 'Interfejs webowy Stash',
+    6: 'Ustaw hasło interfejsu',
+    7: 'Generuje nowe hasło do logowania w interfejsie webowym Stash. Nazwa użytkownika to zawsze „admin”.',
+    8: 'Zastępuje istniejące hasło. Po wykonaniu zaktualizuj zapisane dane logowania.',
+    9: 'Wygeneruj hasło do logowania w interfejsie webowym Stash',
   },
   fr_FR: {
     0: 'Démarrage de Stash !',
@@ -32,5 +44,9 @@ export default {
     3: "L'interface web n'est pas prête",
     4: 'Interface web',
     5: "L'interface web de Stash",
+    6: "Définir le mot de passe de l'interface",
+    7: "Génère un nouveau mot de passe pour se connecter à l'interface web de Stash. Le nom d'utilisateur est toujours « admin ».",
+    8: "Cela remplace tout mot de passe existant. Mettez à jour les identifiants enregistrés après l'exécution.",
+    9: "Générez un mot de passe pour vous connecter à l'interface web de Stash",
   },
 } satisfies Record<string, LangDict>

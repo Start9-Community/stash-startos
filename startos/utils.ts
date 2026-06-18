@@ -2,3 +2,5 @@
 // throughout the package codebase. This file will be unnecessary for many packages.
 
 export const uiPort = 5173
+
+export const uiUsername = 'admin'
