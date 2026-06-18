@@ -13,7 +13,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
    *
    * Stash is a single Node service. The `main` volume holds notes, uploads,
    * chats, and settings; the `models` volume caches downloaded model weights.
-   * Both are mounted at the paths server.js expects.
+   * Both are mounted at the paths the app expects.
    */
   return sdk.Daemons.of(effects).addDaemon('primary', {
     subcontainer: await sdk.SubContainer.of(
@@ -34,11 +34,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
         }),
       'stash-sub',
     ),
-    // server.js resolves PUBLIC/MODELS/CONFIG via __dirname, but lib/store.js
-    // resolves the data dir relative to CWD — so we must run from /app for the
-    // `main` volume mounted at /app/data to be used. `exec` keeps node as the
-    // signalled process so StartOS stop/restart works.
-    exec: { command: ['sh', '-c', 'cd /app && exec node server.js'] },
+    exec: { command: sdk.useEntrypoint() },
     ready: {
       display: i18n('Web Interface'),
       // Stash serves the UI immediately; models load in the background, so a
