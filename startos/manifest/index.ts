@@ -5,7 +5,7 @@ export const manifest = setupManifest({
   id: 'stash',
   title: 'Stash',
   license: 'AGPL-3.0',
-  packageRepo: 'https://github.com/savewithstash/stash-startos',
+  packageRepo: 'https://github.com/Start9-Community/stash-startos',
   upstreamRepo: 'https://github.com/savewithstash/stash',
   marketingUrl: 'https://github.com/savewithstash/stash',
   donationUrl: null,
