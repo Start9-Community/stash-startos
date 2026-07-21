@@ -16,7 +16,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
    * Both are mounted at the paths the app expects.
    */
   return sdk.Daemons.of(effects).addDaemon('primary', {
-    subcontainer: await sdk.SubContainer.of(
+    subcontainer: sdk.SubContainer.of(
       effects,
       { imageId: 'stash' },
       sdk.Mounts.of()

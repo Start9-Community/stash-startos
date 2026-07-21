@@ -5,7 +5,7 @@ export const manifest = setupManifest({
   id: 'stash',
   title: 'Stash',
   license: 'AGPL-3.0',
-  packageRepo: 'https://github.com/savewithstash/stash-startos',
+  packageRepo: 'https://github.com/Start9-Community/stash-startos',
   upstreamRepo: 'https://github.com/savewithstash/stash',
   marketingUrl: 'https://github.com/savewithstash/stash',
   donationUrl: null,
@@ -19,14 +19,6 @@ export const manifest = setupManifest({
       source: { dockerTag: 'savewithstash/stash:1.0.1' },
       arch: ['x86_64', 'aarch64'],
     },
-  },
-  alerts: {
-    install: null,
-    update: null,
-    uninstall: null,
-    restore: null,
-    start: null,
-    stop: null,
   },
   dependencies: {},
 })
