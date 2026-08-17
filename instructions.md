@@ -36,7 +36,7 @@ Open the **Settings** tab inside Stash to pick your language, embedding, and vis
 ## Your data
 
 - **Notes, uploads, chats, and settings** are stored on the backed-up `main` volume — they're included in StartOS backups and restored automatically.
-- **Model weights** live on a separate volume that is *not* backed up, because they re-download automatically when needed.
+- **Model weights** live on a separate volume that is _not_ backed up, because they re-download automatically when needed.
 
 ## Tips
 
