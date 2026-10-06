@@ -18,13 +18,21 @@ Freshly scaffolded? Work the
 guide page, not a file in this repo — read it, don't copy it in.
 
 Keep `README.md` (technical reference for an AI support or administering agent) and
-`instructions.md` (end-user docs) in sync with your changes.
+`instructions.md` (end-user docs) in sync with your changes. This file restates neither:
+whoever changes the package has both, so it carries only what they don't — repo mechanics,
+a change that looks right and is not, where the next thing gets added, a naming trap, a
+build or test invocation particular to this repo.
 
-**Bugs and feature requests are GitHub issues on this repo** — file them as you find them.
+**Fix a defect you spot rather than reporting it** — you have the package open and the
+context to be sure. File **a GitHub issue on this repo** only when the call isn't yours to
+make: you can't pin the cause down, two defensible fixes exist, or it's too large to ride on
+the work in hand. An open issue is a report, not a queue — implement one when you're asked
+to or when it's labelled `Approved`, then close it with `Closes #<n>`.
+
 Don't record work in the repo instead: no `TODO.md`, no `NOTES.md`, no `PLAN.md`. What you
 verified, tried, and decided belongs in the commit message and the PR body.
 
 ## This repo
 
-- **The health check is a port check on purpose.** Stash serves the UI immediately and loads models in the background, so gating readiness on the models would report a working service as unhealthy for the length of a large download. Don't "improve" it into a model-readiness probe.
-- **Inference is on-device.** No API keys, no cloud provider, no outbound dependency once the weights are cached — keep it that way in code and in docs.
+- **Keep the health check a port check.** Stash serves the UI before its models load, so a model-readiness probe would report a working service unhealthy for the length of a large download.
+- **Don't add a cloud inference provider or API-key setting.** On-device inference with no outbound dependency is what this package offers.

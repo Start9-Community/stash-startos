@@ -14,8 +14,12 @@ const dict = {
   // actions/setUiPassword.ts + init/taskSetPassword.ts
   'Set UI Password': 6,
   'Generate a new password for logging in to the Stash web interface. The username is always "admin".': 7,
-  'This replaces any existing password. Update saved logins after running it.': 8,
+  'Replaces the current UI password. The old password stops working, so update saved logins after running it.': 8,
   'Generate a password to log in to the Stash web interface': 9,
+  'UI Password': 10,
+  'Use these credentials to log in to the Stash web interface in your browser.': 11,
+  Username: 12,
+  Password: 13,
 } as const
 
 /**
