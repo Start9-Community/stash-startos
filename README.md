@@ -110,8 +110,8 @@ One action.
 Generates the basic-auth password and shows it once.
 
 - **What it changes:** the password in the store, and through it the credential on the interface.
-- **Cost:** the service restarts, since the binding is rebuilt.
-- **Repeat safety:** each run generates a **new** password and invalidates the old one. It is never user-chosen, and the action warns that saved logins need updating.
+- **Cost:** none to the service — it keeps running; only the interface's credential is replaced.
+- **Repeat safety:** each run generates a **new** password and invalidates the old one. It is never user-chosen. When a password already exists, the action asks for confirmation first and warns that saved logins need updating; the first run, with none set, does not ask.
 - **Outputs:** the fixed username and the new password.
 - **Runnable at any status**, including stopped — which is how the install-time task is completed.
 

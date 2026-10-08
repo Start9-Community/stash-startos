@@ -27,7 +27,7 @@ Stash has no built-in login, so StartOS protects the web interface with a userna
 2. StartOS generates a strong password and shows it with the username, **admin** — copy both.
 3. Enter them when your browser prompts you to open the **Web UI**.
 
-Run **Set UI Password** again any time to rotate the password. It's stored on the backed-up `main` volume, so it survives restarts, updates, and restores.
+Run **Set UI Password** again any time to rotate the password; StartOS asks you to confirm first, because the old password stops working. It's stored on the backed-up `main` volume, so it survives restarts, updates, and restores.
 
 ## Choosing models
 
