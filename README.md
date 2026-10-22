@@ -35,11 +35,11 @@
 
 ## Image and Container Runtime
 
-One upstream image, consumed unmodified.
+One upstream image, with a CA store added by the root `Dockerfile` (`ca-certificates` plus `NODE_OPTIONS=--use-openssl-ca`), a temporary layer that comes out once upstream ships an image on a fixed store.
 
 | Property      | Value                      |
 | ------------- | -------------------------- |
-| Image         | `savewithstash/stash`      |
+| Image         | `savewithstash/stash` + root `Dockerfile` |
 | Architectures | x86_64, aarch64            |
 | Command       | The image's own entrypoint |
 
@@ -161,7 +161,7 @@ Expect a restored instance to take a while before its AI features light up again
 
 ```yaml
 package_id: stash
-image: savewithstash/stash
+image: savewithstash/stash + root Dockerfile (CA store)
 architectures:
   - x86_64
   - aarch64
