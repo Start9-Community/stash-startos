@@ -16,7 +16,9 @@ export const manifest = setupManifest({
   volumes: ['main', 'models'],
   images: {
     stash: {
-      source: { dockerTag: 'savewithstash/stash:1.0.1' },
+      source: {
+        dockerBuild: { buildArgs: { IMAGE: 'savewithstash/stash:1.0.1' } },
+      },
       arch: ['x86_64', 'aarch64'],
     },
   },
