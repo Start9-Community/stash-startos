@@ -17,11 +17,11 @@ Stash's authors publish a prebuilt multi-arch image to Docker Hub (`savewithstas
   gh api repos/savewithstash/stash/tags --jq '.[].name'
   ```
 
-The current pin lives in `startos/manifest/index.ts` at `images.stash.source.dockerTag` (the version after the `:` in `savewithstash/stash:<version>`), and the StartOS version string lives in `startos/versions/current.ts`.
+The current pin lives in `startos/manifest/index.ts` at `images.stash.source.dockerBuild.buildArgs.IMAGE` (the version after the `:` in `savewithstash/stash:<version>`), and the StartOS version string lives in `startos/versions/current.ts`.
 
 ## Applying the bump
 
-1. Bump `dockerTag` in `startos/manifest/index.ts` to `savewithstash/stash:<new version>` (drop any leading `v`).
+1. Bump the `IMAGE` build arg in `startos/manifest/index.ts` to `savewithstash/stash:<new version>` (drop any leading `v`).
 2. Bump `version` in `startos/versions/current.ts` to `<new version>:0` and refresh `releaseNotes`.
 3. Confirm the new image is still multi-arch (`amd64` + `arm64`) so it installs on both x86_64 and aarch64 StartOS hosts:
 

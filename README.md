@@ -35,13 +35,13 @@
 
 ## Image and Container Runtime
 
-One upstream image, with a CA store added by the root `Dockerfile` (`ca-certificates` plus `NODE_OPTIONS=--use-openssl-ca`), a temporary layer that comes out once upstream ships an image on a fixed store.
+One upstream image, with a temporary layer from the root `Dockerfile`: it adds a CA store (`ca-certificates` plus `NODE_OPTIONS=--use-openssl-ca`) and replaces the image's Node with 22.23.4. Each part comes out once upstream ships an image on a fixed store and Node.
 
-| Property      | Value                      |
-| ------------- | -------------------------- |
+| Property      | Value                                     |
+| ------------- | ----------------------------------------- |
 | Image         | `savewithstash/stash` + root `Dockerfile` |
-| Architectures | x86_64, aarch64            |
-| Command       | The image's own entrypoint |
+| Architectures | x86_64, aarch64                           |
+| Command       | The image's own entrypoint                |
 
 | Subcontainer | Purpose                                  |
 | ------------ | ---------------------------------------- |
@@ -161,7 +161,7 @@ Expect a restored instance to take a while before its AI features light up again
 
 ```yaml
 package_id: stash
-image: savewithstash/stash + root Dockerfile (CA store)
+image: savewithstash/stash + root Dockerfile (CA store, Node 22.23.4)
 architectures:
   - x86_64
   - aarch64
